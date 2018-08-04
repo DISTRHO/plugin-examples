@@ -19,6 +19,7 @@ plugins: libs
 	$(MAKE) all -C plugins/Info
 	$(MAKE) all -C plugins/Latency
 	$(MAKE) all -C plugins/Meters
+	$(MAKE) all -C plugins/MidiThrough
 	$(MAKE) all -C plugins/Parameters
 	$(MAKE) all -C plugins/States
 
@@ -41,6 +42,7 @@ endif
 	$(MAKE) clean -C plugins/Info
 	$(MAKE) clean -C plugins/Latency
 	$(MAKE) clean -C plugins/Meters
+	$(MAKE) clean -C plugins/MidiThrough
 	$(MAKE) clean -C plugins/Parameters
 	$(MAKE) clean -C plugins/States
 
