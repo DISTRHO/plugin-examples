@@ -1,6 +1,6 @@
 /*
  * DISTRHO Plugin Framework (DPF)
- * Copyright (C) 2012-2014 Filipe Coelho <falktx@falktx.com>
+ * Copyright (C) 2012-2018 Filipe Coelho <falktx@falktx.com>
  *
  * Permission to use, copy, modify, and/or distribute this software for any purpose with
  * or without fee is hereby granted, provided that the above copyright notice and this
@@ -58,7 +58,7 @@ protected:
         switch (index)
         {
         case 0: // color
-            updateColor(value);
+            updateColor(std::round(value));
             break;
 
         case 1: // out-left
@@ -224,10 +224,10 @@ private:
 
         switch (color)
         {
-        case 0: // green
+        case METER_COLOR_GREEN:
             fColor = Color(93, 231, 61);
             break;
-        case 1: // blue
+        case METER_COLOR_BLUE:
             fColor = Color(82, 238, 248);
             break;
         }
