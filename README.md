@@ -1,3 +1,3 @@
 # DPF Plugin Examples
 
-This repository contains plugin examples and test code for DPF.
+NOTE: Plugin examples have been moved inside DPF, please visit https://github.com/DISTRHO/DPF.
