@@ -12,16 +12,16 @@ NAME = d_info
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	InfoExamplePlugin.cpp.o
+FILES_DSP = \
+	InfoExamplePlugin.cpp
 
-OBJS_UI  = \
-	InfoExampleUI.cpp.o
+FILES_UI  = \
+	InfoExampleUI.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

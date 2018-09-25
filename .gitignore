@@ -12,8 +12,5 @@
 .kdev4/
 .DS_Store
 
-bin/*-dssi/
-bin/*.lv2/
-bin/d_*
-bin/ducka
-bin/roomy
+bin/
+build/

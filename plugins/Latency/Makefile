@@ -12,13 +12,13 @@ NAME = d_latency
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	LatencyExamplePlugin.cpp.o
+FILES_DSP = \
+	LatencyExamplePlugin.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

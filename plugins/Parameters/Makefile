@@ -12,16 +12,16 @@ NAME = d_parameters
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	ExamplePluginParameters.cpp.o
+FILES_DSP = \
+	ExamplePluginParameters.cpp
 
-OBJS_UI  = \
-	ExampleUIParameters.cpp.o
+FILES_UI  = \
+	ExampleUIParameters.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

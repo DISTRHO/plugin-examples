@@ -12,16 +12,16 @@ NAME = d_states
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	ExamplePluginStates.cpp.o
+FILES_DSP = \
+	ExamplePluginStates.cpp
 
-OBJS_UI  = \
-	ExampleUIStates.cpp.o
+FILES_UI  = \
+	ExampleUIStates.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

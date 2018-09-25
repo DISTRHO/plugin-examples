@@ -12,13 +12,13 @@ NAME = d_midiThrough
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	MidiThroughExamplePlugin.cpp.o
+FILES_DSP = \
+	MidiThroughExamplePlugin.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

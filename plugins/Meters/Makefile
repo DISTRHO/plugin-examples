@@ -12,16 +12,16 @@ NAME = d_meters
 # --------------------------------------------------------------
 # Files to build
 
-OBJS_DSP = \
-	ExamplePluginMeters.cpp.o
+FILES_DSP = \
+	ExamplePluginMeters.cpp
 
-OBJS_UI  = \
-	ExampleUIMeters.cpp.o
+FILES_UI  = \
+	ExampleUIMeters.cpp
 
 # --------------------------------------------------------------
 # Do some magic
 
-include ../Makefile.mk
+include ../../dpf/Makefile.plugins.mk
 
 # --------------------------------------------------------------
 # Enable all possible plugin types

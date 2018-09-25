@@ -4,18 +4,18 @@
 # Created by falkTX
 #
 
-include Makefile.mk
+include dpf/Makefile.base.mk
 
-all: libs plugins gen
+all: dgl plugins gen
 
 # --------------------------------------------------------------
 
-libs:
+dgl:
 ifeq ($(HAVE_DGL),true)
 	$(MAKE) -C dpf/dgl
 endif
 
-plugins: libs
+plugins: dgl
 	$(MAKE) all -C plugins/Info
 	$(MAKE) all -C plugins/Latency
 	$(MAKE) all -C plugins/Meters
@@ -23,6 +23,7 @@ plugins: libs
 	$(MAKE) all -C plugins/Parameters
 	$(MAKE) all -C plugins/States
 
+ifneq ($(CROSS_COMPILING),true)
 gen: plugins dpf/utils/lv2_ttl_generator
 	@$(CURDIR)/dpf/utils/generate-ttl.sh
 ifeq ($(MACOS),true)
@@ -31,13 +32,14 @@ endif
 
 dpf/utils/lv2_ttl_generator:
 	$(MAKE) -C dpf/utils/lv2-ttl-generator
+else
+gen:
+endif
 
 # --------------------------------------------------------------
 
 clean:
-ifeq ($(HAVE_DGL),true)
 	$(MAKE) clean -C dpf/dgl
-endif
 	$(MAKE) clean -C dpf/utils/lv2-ttl-generator
 	$(MAKE) clean -C plugins/Info
 	$(MAKE) clean -C plugins/Latency
@@ -45,6 +47,7 @@ endif
 	$(MAKE) clean -C plugins/MidiThrough
 	$(MAKE) clean -C plugins/Parameters
 	$(MAKE) clean -C plugins/States
+	rm -rf bin build
 
 # --------------------------------------------------------------
 
